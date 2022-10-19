@@ -1,0 +1,12 @@
+#carouselExampleControls{
+    height: 500px;
+}
+.carousel-inner{
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img{
+    height: 900px;
+}
