@@ -1,12 +1,98 @@
-#carouselExampleControls{
-    height: 500px;
+
+
+.container{
+    justify-content: center;
+    align-items: center;
 }
+
+#carouselExampleControls{
+    height: 500px; 
+}
+
+.cover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
 .carousel-inner{
     height: 500px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.img{
-    height: 900px;
+
+.card {
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h6{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color:firebrick;
+    background: rgba(0,0,0.4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0, 5px, 10px #000 ;
+}
+
+ .card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px; 
+    line-height: 50px;
+}
+
+.card .back .link .a{
+    color: #f3f3f3;
+}
+
+ .card .back p{
+    letter-spacing: 1px;
+}
+
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
 }
